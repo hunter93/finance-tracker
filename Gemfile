@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'iex-ruby-client'
+gem 'net-http'
 
 #client = IEX::Api::Client.new(
 # publishable_token: 'pk_cedb8a9ca2214c9593cba8283101020f',
