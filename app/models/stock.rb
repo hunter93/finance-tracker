@@ -2,7 +2,7 @@ class Stock < ApplicationRecord
 
   def self.new_lookup(ticker_symbol)
     client = IEX::Api::Client.new(
-      publishable_token: 'pk_cedb8a9ca2214c9593cba8283101020f',
+      publishable_token: Rails.application.credentials.iex_client[:public_key],
       endpoint: 'https://finance-tracker-1993.iex.cloud/v1/'
     )
     client.quote(ticker_symbol).latest_price
