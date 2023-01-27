@@ -22,6 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'iex-ruby-client'
+
+#client = IEX::Api::Client.new(
+# publishable_token: 'pk_cedb8a9ca2214c9593cba8283101020f',
+# endpoint: 'https://finance-tracker-1993.iex.cloud/v1/'
+# )
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
