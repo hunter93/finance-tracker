@@ -18,8 +18,14 @@
 
 .results-block {
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 #results {
-  padding-bottom: 15px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.logout-button {
+  margin-right: 5px;
 }
