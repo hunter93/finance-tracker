@@ -1,0 +1,32 @@
+<h2>User Details</h2>
+
+<div class="results-block">
+  <%= render 'layouts/messages' %>
+</div>
+<div class="results-block">
+  <table class="table table-bordered col-md-12">
+    <tbody>
+      <tr>
+        <td><strong>Name: </strong> <%= @user.full_name %></td>
+        <td><strong>Email: </strong> <%= @user.email %></td>
+        <td><strong>Stocks Count: </strong> <%= @user.stocks.count %></td>
+        <td>
+          <strong>Actions: </strong>
+          <% if !current_user.friends.include?(@user) %>
+            <%= link_to 'Follow Friend?', friendships_path(friend: @user), class: 'btn btn-sm btn-success', method: :post %>
+          <% else %>
+            <span class="badge bg-secondary">Following</span>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% if !@tracked_stocks.empty? %>
+  <%= render 'stocks/list' %>
+<% else %>
+  <p class='lead'>This user is not tracking any stocks</p>
+<% end %>
+
+<%= link_to 'Back to My Portfolio', my_portfolio_path, class: 'btn btn-success' %>

@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'my_portfolio', to: 'users#my_portfolio'
   get 'search_stock', to: 'stocks#search'
+  get 'friends', to: 'users#friends'
+  get 'search_friends', to: 'users#search_friends'
+  resources :friendships, only: [:create, :destroy]
+  resources :users, only: [:show]
 end

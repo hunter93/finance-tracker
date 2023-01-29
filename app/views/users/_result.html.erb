@@ -9,7 +9,7 @@
     <% if current_user.can_track_stock?(@stock.ticker) %>
       <%= link_to 'Add to Portfolio', user_stocks_path(user: current_user, ticker: @stock.ticker), class: "btn btn-success", method: :post %>
     <% else %>
-      <span class="badge badge-dark">
+      <span class="badge bg-secondary">
         You are already tracking
         <% if !current_user.under_stock_limit? && current_user.stock_already_tracked?(@stock.ticker) %>
           10 stocks and this stock
