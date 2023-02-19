@@ -24,3 +24,4 @@ end
 
 
 #  how to get price > client.quote(ticker_symbol).latest_price
+# how to get historical data > client.historical_prices('AAPL')
